@@ -4,6 +4,12 @@ public class Impuesto extends Factura{
 	
 	public double tasaDeServicio;
 
+	
+	
+	public Impuesto(double tasaDeServicio) {
+		this.tasaDeServicio = tasaDeServicio;
+	}
+
 	public double getTasaDeServicio() {
 		return tasaDeServicio;
 	}

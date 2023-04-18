@@ -14,7 +14,7 @@ public class Caja implements Agencia {
 	}
 	
 	public void registrarPago(Factura factura) {
-		
+		factura.montoAPagar();
 	}
 	
 }

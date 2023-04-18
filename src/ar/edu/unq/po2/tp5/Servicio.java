@@ -10,6 +10,13 @@ public class Servicio extends Factura {
 		return unidadesConsumidas;
 	}
 
+	
+
+	public Servicio(int unidadesConsumidas, double costoUnidad) {
+		this.unidadesConsumidas = unidadesConsumidas;
+		this.costoUnidad = costoUnidad;
+	}
+
 
 
 	public void setUnidadesConsumidas(int unidadesConsumidas) {
