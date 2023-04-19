@@ -1,21 +1,33 @@
 package ar.edu.unq.po2.tp6.bancoyprestamos;
 
-public class SolicitudDeCredito {
+public abstract class SolicitudDeCredito {
 
-	private Cliente cliente;
+	public Cliente cliente;
+	public double monto;
+	public int plazo;
 	
-	public boolean cumpleRequisitos() {
-		// TODO Auto-generated method stub
-		return false;
+	
+	public SolicitudDeCredito(Cliente cliente, double monto, int plazo) {
+		this.cliente = cliente;
+		this.monto = monto;
+		this.plazo = plazo;
 	}
 
+	abstract public boolean cumpleRequisitos();
+	
 	public double getMonto() {
-		// TODO Auto-generated method stub
-		return 0.0d;
+		return monto;
 	}
 
+	public int getPlazo() {
+		return plazo;
+	}
 	public Cliente getCliente() {
 		return cliente;
+	}
+	
+	public double getMontoCuotaMensual() {
+		return monto / plazo;
 	}
 
 }

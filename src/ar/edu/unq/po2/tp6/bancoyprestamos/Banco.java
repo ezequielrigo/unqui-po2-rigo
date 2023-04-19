@@ -72,6 +72,11 @@ public class Banco {
 		solicitudesAprobadas.add(solicitudDeCredito);
 		this.montoPrestado += solicitudDeCredito.getMonto();
 		solicitudDeCredito.getCliente().cobrar(solicitudDeCredito.getMonto());
+		solicitudDeCredito.getCliente().pagarPrestamo(solicitudDeCredito.getMonto(),solicitudDeCredito.getPlazo());
+	}
+	
+	public void cobrar(double monto) {
+		this.montoCobrado += monto;
 	}
 	
 }
