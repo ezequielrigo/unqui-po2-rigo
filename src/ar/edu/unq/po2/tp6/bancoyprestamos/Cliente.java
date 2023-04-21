@@ -79,6 +79,15 @@ public class Cliente {
 	public void solicitarCredito(SolicitudDeCredito solicitud) {
 		this.banco.registrarSolicitud(solicitud);
 	}
+	
+	public SolicitudDeCreditoPersonal crearSolicitudPrestamoPersonal(double monto, int plazo) {
+		return new SolicitudDeCreditoPersonal(this,monto,plazo);
+	}
+	
+	public SolicitudDeCreditoHipotecario crearSolicitudPrestamoHipotecario(double monto, int plazo, Propiedad propiedad) {
+		return new SolicitudDeCreditoHipotecario(this, monto, plazo,propiedad) ;
+		
+	}
 
 	public void cobrar(double monto) {
 		this.montoPrestado += monto;

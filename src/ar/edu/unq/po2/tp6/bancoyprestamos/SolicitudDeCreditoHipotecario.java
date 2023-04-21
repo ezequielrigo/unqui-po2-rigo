@@ -21,7 +21,7 @@ public class SolicitudDeCreditoHipotecario extends SolicitudDeCredito {
 	}
 	
 	public boolean garantiaEsSuficiente() {
-		return this.getMonto() < propiedadEnGarantia.getValor()*0.7;
+		return this.getMonto() < (propiedadEnGarantia.getValor()* 0.7d);
 	}
 	
 	public boolean edadEsPermitida() {
