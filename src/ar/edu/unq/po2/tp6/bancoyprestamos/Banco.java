@@ -11,14 +11,18 @@ public class Banco {
 	private double montoPrestado;
 	private double montoCobrado;
 	
-	public Banco(ArrayList<Cliente> clientes, ArrayList<SolicitudDeCredito> solicitudes) {
+	public Banco(ArrayList<Cliente> clientes) {
 		this.clientes = clientes;
-		this.solicitudes = solicitudes;
+		this.solicitudes = new ArrayList<SolicitudDeCredito>();
 	}
 	
 	public Banco() {
 		this.clientes = new ArrayList<Cliente>();
 		this.solicitudes = new ArrayList<SolicitudDeCredito>();
+		this.solicitudesAprobadas = new ArrayList<SolicitudDeCredito>();
+		this.solicitudesRechazadas = new ArrayList<SolicitudDeCredito>();
+		this.montoCobrado = 0;
+		this.montoPrestado =0;
 	}
 
 	public ArrayList<Cliente> getClientes() {

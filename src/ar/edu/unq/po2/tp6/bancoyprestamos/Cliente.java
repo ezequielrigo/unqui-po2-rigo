@@ -27,12 +27,13 @@ public class Cliente {
 
 
 
-	public Cliente(String nombre, String apellido, String direccion, int edad, double sueldoNetoMensual) {
+	public Cliente(String nombre, String apellido, String direccion, int edad, double sueldoNetoMensual, Banco banco) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
 		this.edad = edad;
 		this.sueldoNetoMensual = sueldoNetoMensual;
+		this.banco = banco;
 	}
 
 

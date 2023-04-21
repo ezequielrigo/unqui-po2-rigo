@@ -13,6 +13,16 @@ public class SolicitudDeCreditoPersonal extends SolicitudDeCredito {
 	@Override
 	public boolean cumpleRequisitos() {
 
-		return false;
+		return this.cumpleSalarioMinimo(cliente) 
+				&& this.cumplePorcentajeDeIngreso(cliente) ;
+	}
+
+	private boolean cumplePorcentajeDeIngreso(Cliente cliente) {
+		return cliente.getSueldoNetoMensual() > 15000;
+	}
+
+	private boolean cumpleSalarioMinimo(Cliente cliente) {
+	
+		return monto / plazo < cliente.getSueldoNetoMensual() * porcentajeDeIngreso;
 	}
 }

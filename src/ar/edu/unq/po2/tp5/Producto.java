@@ -2,11 +2,12 @@ package ar.edu.unq.po2.tp5;
 
 public class Producto {
 	
+	String nombre;
 	double precio;
 	int cantidadEnStock;
 	
 	public double getPrecio() {
-		return precio;
+		return precio*1.21;
 	}
 	public void setPrecio(double precio) {
 		this.precio = precio;
@@ -17,7 +18,8 @@ public class Producto {
 	public void setCantidadEnStock(int cantidadEnStock) {
 		this.cantidadEnStock = cantidadEnStock;
 	}
-	public Producto(double precio, int cantidadEnStock) {
+	public Producto(String nombre, double precio, int cantidadEnStock) {
+		this.nombre = nombre;
 		this.precio = precio;
 		this.cantidadEnStock = cantidadEnStock;
 	}

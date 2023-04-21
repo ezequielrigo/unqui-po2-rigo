@@ -8,10 +8,12 @@ import org.junit.jupiter.api.Test;
 class ClienteTest {
 	
 	private Cliente cliente1;
+	private Banco banco;
 	
 	@BeforeEach
 	public void setUp() {
-		cliente1 = new Cliente ("juan","perez","av.siempreviva",22,16000.0d);
+		banco = new Banco ();
+		cliente1 = new Cliente ("juan","perez","av.siempreviva",22,16000.0d,banco);
 	}
 
 	@Test
