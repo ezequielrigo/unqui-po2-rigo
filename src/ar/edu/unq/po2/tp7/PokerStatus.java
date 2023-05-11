@@ -52,5 +52,6 @@ public class PokerStatus {
 		}
 		return contador ==n;
 	}
+	
 
 }
